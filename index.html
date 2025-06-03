@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjali's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: #1e2a38;
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header h1 {
+      float: left;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .toggle-container {
+      float: right;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #3498db;
+    }
+
+    .project {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-icons a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s;
+    }
+
+    .contact-icons a img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e2a38;
+      color: white;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Anjali Verma</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://drive.google.com/file/d/1tXUIwnur08gdcagJltefBSbAXSjnxb_A/view?usp=sharing" target="_blank" download>Download Resume</a></li>
+        </ul>
+      </nav>
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="modeToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am Anjali, a passionate developer skilled in HTML, CSS, JavaScript, and Python. I enjoy building responsive web interfaces and applying deep learning in real-world applications like disease diagnosis and intelligent tools.</p>
+    </div>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Interactive Portfolio Website</h3>
+        <p>A fully responsive, animated portfolio to showcase my work. Built using HTML, CSS, JavaScript, and AOS animations, this project features smooth transitions and dark mode toggling for an accessible user experience.</p>
+      </div>
+      <div class="project">
+        <h3>Alzheimer's Disease Detection from MRI Scans</h3>
+        <p>Designed a deep learning model using CNN architectures like ResNet50 and EfficientNet to classify MRI scans into Alzheimer's stages. The project enhances early detection and diagnosis support through a user-friendly interface.</p>
+      </div>
+      <div class="project">
+        <h3>CT-Based Lung Cancer Diagnosis Using CNN</h3>
+        <p>Developed and evaluated multiple CNN models to classify lung CT scans into four categories: Adenocarcinoma, Large Cell Carcinoma, Squamous Cell Carcinoma, and Normal.</ul>
+ Achieved 95.83% validation and test accuracy using ResNet50 with transfer learning and optimized prepro
+cessing techniques.
+ Conducted comparative analysis using performance metrics and visualizations to determine the best model.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-icons">
+        <a href="mailto:anjaliverma3299@gmail.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+        </a>
+        <a href="https://www.linkedin.com/in/-anjali-verma/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/AV2262" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+        </a>
+        <a href="https://leetcode.com/u/anjaliverma3299/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" />
+        </a>
+        <a href="https://www.hackerrank.com/profile/anjaliverma3299" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank" />
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Anjali. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    const modeToggle = document.getElementById('modeToggle');
+    modeToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+
+</html>
